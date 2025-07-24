@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application Security test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      width: 300px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is a testing for springboot</h1>
+  <h2>Enter a value to pass to the URL:</h2>
+  <input type="text" id="inputText" placeholder="Type something..." />
+  <button onclick="passToURL()">Submit</button>
+
+  <script>
+    function passToURL() {
+      const value = document.getElementById("inputText").value;
+      const targetURL = "https://HKAENl6LEkEE221:8443/spring-boot/apptest?name=" + encodeURIComponent(value);
+      window.location.href = targetURL;
+    }
+  </script>
+</body>
+</html>
